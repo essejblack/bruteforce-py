@@ -1,0 +1,5 @@
+administrator
+root
+user
+ubuntu
+admin
